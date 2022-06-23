@@ -28,7 +28,7 @@
     position: absolute;
     bottom: -100px;
 }
-.hero .key {
+.key {
     background-color: #008325;
     width: 250px;
     margin: 0 auto;
@@ -294,11 +294,11 @@
     flex-direction: column;
 }
 .team div h4 {
-    font-size: 22px;
+    font-size: 16px;
 }
 .team div strong {
     font-size: 30px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .team div a {
     text-decoration: none;
@@ -538,11 +538,11 @@
     flex-direction: column;
 }
 .shop div h4 {
-    font-size: 22px;
+    font-size: 16px;
 }
 .shop div strong {
     font-size: 30px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .shop div a {
     text-decoration: none;
@@ -617,4 +617,80 @@
 .donate div:last-of-type button:last-of-type {
     background-color: white;
     color: #D60701;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.media h3 {
+    font-size: 25px;
+    color: #D60701;
+    margin-bottom: 30px;
+    border-bottom: 3px solid rgba(0, 131, 37, 1);
+}
+.media > div {
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.media div nav {
+    background: #00640F;
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.media div nav > img {
+    height: 60px;
+    width: 60px;
+}
+.media div nav p {
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: space-between;
+}
+.media div nav button {
+    padding: 10px;
+    margin: auto auto 50px;
+    width: fit-content;
+    height: 50px;
+    border: none;
+    background-color: white;
+    color: #008325;
+}
+.media div nav div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.media div nav div img {
+    width: 48%;
+    margin: 5px 0;
+}
+.media div nav figure {
+    margin: 15px 0;
+}
+.media div figure img {
+    width: 100%;
+    height: 100%;
+}
+.media div nav:first-of-type {
+    background-color: #05440F;
+}
+.media div nav:nth-of-type(2) {
+    background-color: #00640F;
+}
+.media div nav:nth-of-type(3) {
+    background-color: #008325;
+}
+.media div nav:nth-of-type(4) {
+    background-color: #D60701;
 }

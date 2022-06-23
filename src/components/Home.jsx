@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './../styles/home.module.css'
 import Header from './Header'
+import Footer from './Footer'
 import hero1 from './../assets/contest.png'
 import hero2 from './../assets/vote.png'
 import hero3 from './../assets/vol.png'
@@ -31,14 +32,19 @@ import memberbg from './../assets/member.png'
 import shop1 from './../assets/shop1.png'
 import shop2 from './../assets/shop2.png'
 import shop3 from "./../assets/shop3.png";
-// import fb from './../assets/fb.png'
-// import twitter from './../assets/twitter.png'
-// import insta from './../assets/insta.png'
-// import youtube from './../assets/youtube.png'
+import fb from './../assets/fb.png'
+import twitter from './../assets/twitter.png'
+import insta from './../assets/insta.png'
+import youtube from './../assets/youtube.png'
+import insta1 from './../assets/insta1.png'
+import insta2 from './../assets/insta2.png'
+import insta3 from './../assets/insta3.png'
+import insta4 from './../assets/insta4.png'
+import youtube1 from './../assets/youtube1.png'
 import { Link } from 'react-router-dom'
 export default function Home() {
   return (
-    <div>
+    <main>
       <Header />
       <section className={style.hero}>
         <div>
@@ -390,7 +396,7 @@ export default function Home() {
           </nav>
         </div>
       </section>
-      {/* <section>
+      <section className={style.media}>
         <h3>Social Media</h3>
         <div>
           <nav>
@@ -439,33 +445,24 @@ export default function Home() {
           </nav>
           <nav>
             <img src={insta} alt="" />
-
+            <div>
+              <img src={insta1} alt="" />
+              <img src={insta2} alt="" />
+              <img src={insta3} alt="" />
+              <img src={insta4} alt="" />
+            </div>
             <button>Follow Us On Facebook</button>
           </nav>
           <nav>
-            <img src={fb} alt="" />
-            <p>
-              Donec porta diam eu massa. Quisque diam lorem, dapibus ac,
-              scelerisque vitae, pede. Donec eget tellus non erat lacinia.
-            </p>
-            <p>
-              <span>3rd June</span>
-              <span>See Post</span>
-              <span>Share Post</span>
-            </p>
-            <p>
-              Donec porta diam eu massa. Quisque diam lorem, dapibus ac,
-              scelerisque vitae, pede. Donec eget tellus non erat lacinia.
-            </p>
-            <p>
-              <span>3rd June</span>
-              <span>See Post</span>
-              <span>Share Post</span>
-            </p>
+            <img src={youtube} alt="" />
+            <figure>
+              <img src={youtube1} alt="" />
+            </figure>
             <button>Follow Us On Facebook</button>
           </nav>
         </div>
-      </section> */}
-    </div>
+      </section>
+      <Footer />
+    </main>
   );
 }
