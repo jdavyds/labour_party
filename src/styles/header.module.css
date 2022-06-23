@@ -1,0 +1,89 @@
+.header {
+    height: fit-content;
+    display: flex;
+}
+.logo {
+    padding: 30px 20px 20px;
+}
+.logo img {
+    height: 110px;
+}
+.navRight {
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.navTop {
+    display: flex;
+}
+.navTop label {
+    width: 70%;
+    height: 40px;
+    color: rgb(7, 3, 22, 0.7);
+    display: flex;
+    align-items: center;
+}
+.navTop input {
+    width: 500px;
+    height: 100%;
+    padding-left: 15px;
+    margin: 0 0 0 auto;
+}
+.navTop label button {
+    background: #008325;
+    color: white;
+    border: none;
+    height: 100%;
+    width: fit-content;
+    padding: 0 15px;
+    font-size: 14px;
+}
+.navTop nav {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.navTop nav button {
+    height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: inherit;
+}
+.navTop nav button:first-of-type {
+    background-color: #008325;
+    color: white;
+    padding: 0 15px;
+    border-radius: 20px;
+}
+.navTop nav img {
+    margin-left: 5px;
+}
+.navBtm {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    background-color: #008325;
+    height: 70px;
+    width: 100%;
+    margin-top: 30px;
+}
+.navBtm a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navBtm a.active {
+    background-color: #0A521E;
+    color: white;
+    padding: 0 10px;
+}
+.navBtm a:last-of-type {
+    background-color: #D60701;
+}
