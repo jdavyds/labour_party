@@ -18,14 +18,22 @@
     display: flex;
 }
 .navTop label {
-    width: 70%;
+    min-width: 60%;
+    width: 70% auto;
     height: 40px;
     color: rgb(7, 3, 22, 0.7);
     display: flex;
     align-items: center;
 }
+.navTop label span {
+    min-width: fit-content;
+    width: auto;
+    font-size: 20px;
+}
 .navTop input {
-    width: 500px;
+    max-width: 500px;
+    min-width: 400px;
+    width: auto;
     height: 100%;
     padding-left: 15px;
     margin: 0 0 0 auto;
@@ -35,7 +43,8 @@
     color: white;
     border: none;
     height: 100%;
-    width: fit-content;
+    min-width: fit-content;
+    width: auto;
     padding: 0 15px;
     font-size: 14px;
 }

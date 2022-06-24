@@ -1,23 +1,47 @@
 .hero {
     height: 550px;
     margin-bottom: 150px;
-    background-image: url(./../assets/hero.png);
     background-size: 100% 100%;
     padding: 120px;
     color: white;
     position: relative;
 }
-.hero div:first-of-type {
+.hero_back {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.hero_next {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.hero_back:hover, .hero_next:hover {
+    opacity: 0.5;
+}
+.hero_main {
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+}
+.hero_main section {
+    min-width: 100%;
+    width: 100%;
+    transition: transform 0.8s ease-in-out;
     display: flex;
     flex-direction: column;
 }
-.hero div h3 {
+.hero_main h3 {
     font-size: 20px;
 }
-.hero div h2 {
+.hero_main h2 {
     font-size: 45px;
 }
-.hero div h1 {
+.hero_main h1 {
     font-size: 70px;
 }
 .hero div:last-of-type {
@@ -104,14 +128,22 @@
 }
 .key_pol {
     width: 70%;
-    padding: 0 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 30px;
+}
+.key_pol section {
+    min-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
 }
 .key_pol div {
+    min-width: 100%;
     width: 100%;
+    transition: transform 0.8s ease-in-out;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
@@ -130,8 +162,11 @@
 }
 .key_pol > nav img {
     margin: 0 10px;
+    cursor: pointer;
 }
-
+.key_pol > nav img:hover {
+    opacity: 0.5;
+}
 .about {
     padding: 50px 100px;
     display: flex;
@@ -199,12 +234,12 @@
     margin: 70px 0;
     color: #D60701;
 }
-.story div {
+.story > div {
     display: grid;
     grid-template-columns: 31% 31% 31%;
     justify-content: space-between;
 }
-.story div nav {
+.story > div nav {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -216,6 +251,16 @@
     box-shadow: 0 0 5px 0 #78CC90;
     display: flex;
     align-items: center;
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;
+}
+.story nav span:hover {
+    background-color: #008325;
+    color: white;
+}
+.story nav span.decade {
+    background-color: #008325;
+    color: white;
 }
 .story figure {
     height: auto;
@@ -225,12 +270,21 @@
     width: 100%;
     height: 100%;
 }
-.story section {
+.story_para {
+    overflow-y: hidden;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+}
+.story_para  section {
+    min-height: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.8s ease-in-out;
 }
-.story section p {
+.story_para section p {
     color: #525253;
     line-height: 1.6;
 }
@@ -245,10 +299,19 @@
     margin: 70px 0;
     color: #D60701;
 }
-.why div {
+.why section {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+.why div{
+    min-height: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0 120px;
+    transition: transform 0.8s ease-in-out;
 }
 .why div > img {
     width: 200px;
@@ -273,6 +336,10 @@
 }
 .why nav img {
     margin: 5px 0;
+    cursor: pointer;
+}
+.why nav img:hover {
+    opacity: 0.5;
 }
 .why button {
     background-color: #F4F4F4;
@@ -308,11 +375,44 @@
 .team nav {
     width: 70%;
     height: 300px;
-    display: flex;
-    justify-content: space-evenly;
+    padding: 0 25px;
+    position: relative;
 }
-.team nav img {
+.team nav figure {
+    min-width: 100%;
+    width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+}
+.team nav figure::-webkit-scrollbar {
+    display: none;
+}
+.team nav figure img {
+    height: 100%;
+    margin: 0 10px;
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;
+}
+.team .team_back {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    height: fit-content;
+}
+.team .team_next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    height: fit-content;
+}
+.team_back:hover, .team_next:hover {
+    opacity: 0.5;
 }
 
 .events {
@@ -551,14 +651,25 @@
 }
 .shop nav {
     width: 70%;
+    height: 350px;
+    padding: 0 25px;
+    position: relative;
+}
+.shop nav section {
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    overflow-x: scroll;
 }
 .shop nav div {
     height: auto;
-    width: 30%;
+    min-width: 31%;
+    margin: 0 10px;
     display: flex;
     flex-direction: column;
+    transition: all 0.8s ease-in-out;
 }
 .shop nav div img {
     height: 250px;
@@ -567,10 +678,33 @@
 .shop nav div h4 {
     font-size: 18px;
     margin: 10px 0;
+    cursor: pointer;
+}
+.shop nav div h4:hover {
+    color: #008325;
 }
 .shop nav div small {
     font-size: 16;
     color: #CC6E00;
+}
+.shop .shop_back {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    height: fit-content;
+}
+.shop .shop_next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    height: fit-content;
+}
+.shop_back:hover, .shop_next:hover {
+    opacity: 0.5;
 }
  
 .donate {
@@ -609,14 +743,29 @@
     border-radius: 5px;
     border: 1px solid;
     background-color: inherit;
+    cursor: pointer;
+}
+.donate div nav button:hover {
+    background-color: white;
+    color: #008325;
 }
 .donate div:first-of-type button:last-of-type {
     background-color: white;
     color: #008325;
 }
+.donate div:first-of-type button:last-of-type:hover {
+    opacity: 0.7;
+}
 .donate div:last-of-type button:last-of-type {
     background-color: white;
     color: #D60701;
+}
+.donate div:last-of-type button:hover {
+    color: #D60701;
+    background-color: white;
+}
+.donate div:last-of-type button:last-of-type:hover {
+    opacity: 0.7;
 }
 
 .media {
@@ -664,6 +813,10 @@
     border: none;
     background-color: white;
     color: #008325;
+    cursor: pointer;
+}
+.media div nav button:hover {
+    opacity: 0.7;
 }
 .media div nav div {
     display: flex;
