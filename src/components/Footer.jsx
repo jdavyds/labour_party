@@ -1,9 +1,5 @@
 import React from 'react'
 import style from './../styles/footer.module.css'
-import hero1 from "./../assets/contest.png";
-import hero2 from "./../assets/vote.png";
-import hero3 from "./../assets/vol.png";
-import hero4 from "./../assets/donate.png";
 import app_store from './../assets/app_store.png'
 import play_store from './../assets/play_store.png'
 import { Link } from 'react-router-dom';
@@ -11,36 +7,6 @@ import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <footer>
-      <section className={style.major_keys}>
-        <nav className={style.key}>
-          <img src={hero1} alt="" />
-          <span>CONTEST</span>
-          <small>
-            For An Elective Position <br /> For Party Leadership
-          </small>
-        </nav>
-        <nav className={style.key}>
-          <img src={hero2} alt="" />
-          <span>VOTE</span>
-          <small>
-            By Proxy Outside Nigeria <br /> By Proxy without Voters Card
-          </small>
-        </nav>
-        <nav className={style.key}>
-          <img src={hero3} alt="" />
-          <span>VOLUNTEER</span>
-          <small>
-            Skill or Time <br /> As A Unit Leader
-          </small>
-        </nav>
-        <nav className={style.key}>
-          <img src={hero4} alt="" />
-          <span>DONATE</span>
-          <small>
-            Funds or Kind <br /> Through Your Spend
-          </small>
-        </nav>
-      </section>
       <section className={style.nav_links}>
         <nav>
           <Link to="/">The Party</Link>
@@ -97,6 +63,17 @@ export default function Footer() {
             <Link to="/">GDPR</Link>
             <Link to="/">NDPR</Link>
           </nav>
+          <section className={style.res_app}>
+            <p>LP MOBILE APP COMING SOON!</p>
+            <nav>
+              <button>
+                <img src={app_store} alt="" />
+              </button>
+              <button>
+                <img src={play_store} alt="" />
+              </button>
+            </nav>
+          </section>
           <nav>
             <b>Paid For By Labour Party Supporters</b>
             <small>(c) 2022 Labour Party. All Rights Reserved</small>

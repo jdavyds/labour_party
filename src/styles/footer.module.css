@@ -1,53 +1,3 @@
-.major_keys {
-    padding: 50px 120px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    background-image: url(./../assets/line.png);
-    background-repeat: no-repeat;
-    background-position: bottom 80px left 0px;
-    background-repeat: repeat-x;
-}
-.key {
-    background-color: #008325;
-    width: 250px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.key img {
-    width: 40px;
-    height: 40px;
-}
-.key span {
-    font-weight: 600;
-    font-size: 20px;
-    margin: 10px 0;
-}
-.key small {
-    font-size: 14px;
-    text-align: center;
-    line-height: 1.5;
-}
-.key:first-of-type {
-    margin-left: 0;
-    background-color: #05440F;
-}
-.key:nth-of-type(2) {
-    background-color: #00640F;
-}
-.key:nth-of-type(3) {
-    background-color: #008325;
-}
-.key:last-of-type {
-    margin-right: 0;
-    background-color: #D60701;
-}
 .nav_links {
     padding: 30px 120px;
     display: flex;
@@ -61,7 +11,7 @@
     text-decoration: none;
     color: #070316;
     opacity: 0.7;
-    font-size: px;
+    font-size: 16px;
     font-weight: 600;
     margin: 10px 0;
 }
@@ -70,7 +20,7 @@
     display: flex;
     justify-content: space-evenly;    
 }
-.footer_btm div {
+.rights {
     display: flex;
     flex-direction: column;
 }
@@ -95,6 +45,8 @@
 .app {
     padding: 10px;
     border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -109,4 +61,68 @@
 }
 .app img {
     height: 35px;
+}
+.res_app {
+    display: none;
+}
+@media only screen and (max-width: 850px) { 
+.nav_links {
+    padding: 30px 20px;
+    flex-wrap: wrap;
+    border-top: 2px solid #D60701;
+    border-bottom: 2px solid #D60701;
+}
+.nav_links nav {
+    width: 47%;
+    margin: 10px 0;
+}
+.nav_links nav a {
+    font-size: 14px;
+    height: 30px;
+    margin: 7px 0;
+}
+.footer_btm {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.rights nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+.rights a {
+    width: 50%;
+    display: flex;
+    margin: 10px 0;
+}
+.rights nav b {
+    margin: 10px auto;
+}
+.rights nav small {
+    margin: 0 auto;
+}
+.app {
+    display: none;
+}
+.res_app {
+    margin: 20px 0;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.res_app p {
+    color: #008325;
+    margin: 10px;
+    font-size: 14px;
+}
+.res_app button {
+    background: inherit;
+    border: none;
+    margin: 5px;
+}
+.res_app img {
+    height: 35px;
+}    
 }

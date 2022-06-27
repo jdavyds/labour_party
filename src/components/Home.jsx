@@ -48,7 +48,6 @@ import herobg2 from './../assets/meet.png'
 import herobg3 from "./../assets/hero.png";
 import { Link } from 'react-router-dom'
 export default function Home() {
-
   const [current, setCurrent] = useState(1)
   const [bg, setbg] = useState(herobg1)
   const [trans, setTrans] = useState(0)
@@ -287,7 +286,7 @@ export default function Home() {
     transform: "translateX(" + shop_trans + "% )",
   };
   useEffect(() => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 808) {
       setTimeout(() => {
         if (current === 1) {
           setCurrent(2);
@@ -343,8 +342,10 @@ export default function Home() {
       }, 5000)
     }
   }, [current, pol_trans, year1, year2, year3, year4, year5, year6, year7, why_trans]);
+
+
   return (
-    <main>
+    <main className={style.main}>
       <Header />
       <section className={style.hero} style={{ backgroundImage: `url(${bg})` }}>
         <img
@@ -359,55 +360,52 @@ export default function Home() {
           onClick={handleNextHero}
           className={style.hero_next}
         />
-        <div className={style.hero_main}>
-          <section style={hero_change}>
-            <h3>A NEW LEADERSHIP</h3>
-            <h2>MOMS FOR OBI</h2>
-            <h1>#WorkingTogether</h1>
-          </section>
-          <section style={hero_change}>
-            <h3>A NEW LEADERSHIP</h3>
-            <h2>DADS FOR OBI</h2>
-            <h1>#WorkingTogether</h1>
-          </section>
-          <section style={hero_change}>
-            <h3>A NEW LEADERSHIP</h3>
-            <h2>YOUTHS FOR OBI</h2>
-            <h1>#WorkingTogether</h1>
-          </section>
-        </div>
-        <div>
-          <nav className={style.key}>
-            <img src={hero1} alt="" />
-            <span>CONTEST</span>
-            <small>
-              For An Elective Position <br /> For Party Leadership
-            </small>
-          </nav>
-          <nav className={style.key}>
-            <img src={hero2} alt="" />
-            <span>VOTE</span>
-            <small>
-              By Proxy Outside Nigeria <br /> By Proxy without Voters Card
-            </small>
-          </nav>
-          <nav className={style.key}>
-            <img src={hero3} alt="" />
-            <span>VOLUNTEER</span>
-            <small>
-              Skill or Time <br /> As A Unit Leader
-            </small>
-          </nav>
-          <nav className={style.key}>
-            <img src={hero4} alt="" />
-            <span>DONATE</span>
-            <small>
-              Funds or Kind <br /> Through Your Spend
-            </small>
-          </nav>
-        </div>
+        <section style={hero_change}>
+          <h3>A NEW LEADERSHIP</h3>
+          <h2>MOMS FOR OBI</h2>
+          <h1>#WorkingTogether</h1>
+        </section>
+        <section style={hero_change}>
+          <h3>A NEW LEADERSHIP</h3>
+          <h2>DADS FOR OBI</h2>
+          <h1>#WorkingTogether</h1>
+        </section>
+        <section style={hero_change}>
+          <h3>A NEW LEADERSHIP</h3>
+          <h2>YOUTHS FOR OBI</h2>
+          <h1>#WorkingTogether</h1>
+        </section>
       </section>
-
+      <section className={style.hero_keys}>
+        <nav className={style.key}>
+          <img src={hero1} alt="" />
+          <span>CONTEST</span>
+          <small>
+            For An Elective Position <br /> For Party Leadership
+          </small>
+        </nav>
+        <nav className={style.key}>
+          <img src={hero2} alt="" />
+          <span>VOTE</span>
+          <small>
+            By Proxy Outside Nigeria <br /> By Proxy without Voters Card
+          </small>
+        </nav>
+        <nav className={style.key}>
+          <img src={hero3} alt="" />
+          <span>VOLUNTEER</span>
+          <small>
+            Skill or Time <br /> As A Unit Leader
+          </small>
+        </nav>
+        <nav className={style.key}>
+          <img src={hero4} alt="" />
+          <span>DONATE</span>
+          <small>
+            Funds or Kind <br /> Through Your Spend
+          </small>
+        </nav>
+      </section>
       <section className={style.policy}>
         <h2>Our Policies</h2>
         <div>
@@ -763,6 +761,7 @@ export default function Home() {
             <img src={team3} alt="" style={team_style} />
           </figure>
         </nav>
+        <Link to="/">Read more</Link>
       </section>
       <section className={style.events}>
         <h3>Events & Volunteer Activities</h3>
@@ -836,6 +835,10 @@ export default function Home() {
         <section className={style.mobile_alert}>
           <div>
             <strong>GET MOBILE ALERT</strong>
+            <p>
+              Get periodic messages from Linda Russell. Message & data rates may
+              apply
+            </p>
             <label>
               <input type="tel" placeholder="Phone Number" />
               <button>Subscribe</button>
@@ -922,6 +925,7 @@ export default function Home() {
               <small>&#8358;1,000/Piece</small>
             </div>
           </section>
+          <Link to="/">Shop Now</Link>
         </nav>
       </section>
       <section className={style.donate}>
@@ -1021,6 +1025,36 @@ export default function Home() {
             <button>Follow Us On Facebook</button>
           </nav>
         </div>
+      </section>
+      <section className={style.major_keys}>
+        <nav className={style.key}>
+          <img src={hero1} alt="" />
+          <span>CONTEST</span>
+          <small>
+            For An Elective Position <br /> For Party Leadership
+          </small>
+        </nav>
+        <nav className={style.key}>
+          <img src={hero2} alt="" />
+          <span>VOTE</span>
+          <small>
+            By Proxy Outside Nigeria <br /> By Proxy without Voters Card
+          </small>
+        </nav>
+        <nav className={style.key}>
+          <img src={hero3} alt="" />
+          <span>VOLUNTEER</span>
+          <small>
+            Skill or Time <br /> As A Unit Leader
+          </small>
+        </nav>
+        <nav className={style.key}>
+          <img src={hero4} alt="" />
+          <span>DONATE</span>
+          <small>
+            Funds or Kind <br /> Through Your Spend
+          </small>
+        </nav>
       </section>
       <Footer />
     </main>

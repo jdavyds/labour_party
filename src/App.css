@@ -9,3 +9,49 @@ a.active {
     color: white;
     padding: 0 10px;
 }
+.unfixed {
+    display: none;
+}
+.fixed {
+    display: flex;
+    position: fixed;
+    top: 400px;
+    right: -180px;
+    transform: rotate(-90deg);
+}
+.fixed nav {
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+.fixed nav:first-of-type {
+    background-color: #05440F;
+}
+.fixed nav:nth-of-type(2) {
+    background-color: #00640F;
+}
+.fixed nav:nth-of-type(3) {
+    background-color: #008325;
+}
+.fixed nav:nth-of-type(4) {
+    background-color: #D60701;
+}
+@media only screen and (max-width: 850px) { 
+.fixed {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    transform: unset;
+    z-index: 99999;
+}
+.fixed nav {
+    width: 1fr;
+    padding: 0 10px;
+}
+}
