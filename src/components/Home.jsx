@@ -46,6 +46,8 @@ import hero_arrnext from './../assets/hero_arrnext.png'
 import herobg1 from './../assets/hero.png'
 import herobg2 from './../assets/meet.png'
 import herobg3 from "./../assets/hero.png";
+import event1 from './../assets/evdot1.png'
+import event2 from "./../assets/evdot2.png";
 import { Link } from 'react-router-dom'
 export default function Home() {
   const [current, setCurrent] = useState(1)
@@ -786,6 +788,11 @@ export default function Home() {
                 </p>
                 <button>View Event Details</button>
               </section>
+              <nav>
+                <img src={event1} alt="" />
+                <img src={event2} alt="" />
+                <img src={event2} alt="" />
+              </nav>
             </div>
             <nav>
               <button>

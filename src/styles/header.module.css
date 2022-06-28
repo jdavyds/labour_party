@@ -1,7 +1,7 @@
 .sticky {
     position: sticky;
-    top: 30px;
     background: white;
+    top: 0;
     z-index: 999999999;
     display: flex;
     height: fit-content;
@@ -112,6 +112,9 @@
 .sticky, .header {
     align-items: center;
 }
+.sticky {
+    top: 30px;
+}
 .logo {
     padding: 15px 20px;
 }
@@ -153,12 +156,18 @@
 }
 .cancel {
     position: absolute;
-    right: 20px;
-    top: 10px;
+    right: 10px;
+    top: 5px;
     cursor: pointer;
     border: none;
     background: inherit;
     padding: 10px;
+}
+.cancel img {
+    background-color: rgb(214, 7, 1, 0.7);
+    height: 30px;
+    width: 30px;
+    border-radius: 2px;
 }
 .modalForm {
     width: 100%;
